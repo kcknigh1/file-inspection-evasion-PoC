@@ -35,13 +35,33 @@ import exploit.file_inspection_evasion as fie
 #  TODO Look up argparser examples
 if __name__ == '__main__':
     # TODO update the description
-    msg = "Test Description"
+    msg = "Test Description can select multiple techniques default is ghost"
 
     parser = argparse.ArgumentParser(description=msg)
 
     parser.add_argument("-f", "--File", required=True, help="zip File to edit")
+    parser.add_argument("-g", "--ghost", action='store_true',
+                        help="use ghost file technique")
+    parser.add_argument("-i", "--invalid_header", action='store_true',
+                        help="use invalid file header technique")
 
     args = parser.parse_args()
 
+    technique = {}
+    if args.ghost:
+        technique['ghost'] = True
+    if args.invalid_header:
+        technique['invalid_header'] = True
+
+    if not args.ghost and not args.invalid_header:
+        technique['ghost'] = True
+        print("not ghost")
+
+    if technique:
+        print(technique)
+    if not technique:
+        print('no technique')
+    print(args)
+
     if args.File:
-        fie.main(file_loc=args.File)
+        fie.main(file_loc=args.File, techniques=technique)
