@@ -55,13 +55,13 @@ if __name__ == '__main__':
 
     if not args.ghost and not args.invalid_header:
         technique['ghost'] = True
-        print("not ghost")
+        # print("not ghost")
 
-    if technique:
-        print(technique)
-    if not technique:
-        print('no technique')
-    print(args)
+    # if technique:
+    #     print(technique)
+    # if not technique:
+    #     print('no technique')
+    # print(args)
 
     if args.File:
         fie.main(file_loc=args.File, techniques=technique)
