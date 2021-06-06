@@ -50,7 +50,7 @@ class TestSplitCentralDirectory(unittest.TestCase):
                                 '001e000000090024000000000000002000000000000000'
                                 '66696c65312e7478740a0020000000000001001800de97'
                                 '3a63f357d70159f6f1fc8d58d701a1b18f58f357d701'))
-        self.assertEqual(end_central_directory,
+        self.assertEqual(end_central_directory._header_hex,
                          '504b050600000000010001005b000000450000000000')
 
     # @unittest.skip("Not implemented yet")
@@ -87,7 +87,7 @@ class TestSplitCentralDirectory(unittest.TestCase):
                           '000200000004500000066696c65322e7478740a002000000000'
                           '0001001800fb016d6ff357d701b79f25478e58d701878b6868f'
                           '357d701'))
-        self.assertEqual(end_central_directory,
+        self.assertEqual(end_central_directory._header_hex,
                          '504b05060000000002000200b60000008a0000000000')
 
 
