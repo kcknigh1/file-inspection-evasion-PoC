@@ -44,7 +44,7 @@ $ python main.py -f test_files/files.zip -i
 
 Use in another project
 ```python
-import exploit.file_inspection_evasion as fie
+import evasion_poc.file_inspection_evasion as fie
 
 technique = ['ghost']
 file_loc = test_files/files.zip
