@@ -44,6 +44,8 @@ if __name__ == '__main__':
                         help="use ghost file technique")
     parser.add_argument("-i", "--invalid_header", action='store_true',
                         help="use invalid file header technique")
+    parser.add_argument("-b", "--buffer_collapsing",
+                        action='store_true', help="use buffer collapsing technique")
 
     args = parser.parse_args()
 
@@ -52,16 +54,21 @@ if __name__ == '__main__':
         technique['ghost'] = True
     if args.invalid_header:
         technique['invalid_header'] = True
+    if args.buffer_collapsing:
+        technique['buffer_collapsing'] = True
 
-    if not args.ghost and not args.invalid_header:
-        technique['ghost'] = True
+    # if not args.ghost and not args.invalid_header:
+        # technique['ghost'] = True
         # print("not ghost")
 
     # if technique:
     #     print(technique)
-    # if not technique:
-    #     print('no technique')
-    # print(args)
+    if len(technique) == 0:
+        print('Evasion Technique required')
 
+    # TODO open this up once tested
+    # elif len(technique) > 1:
+        # print('Only one technique at the moment')
+    # else:
     if args.File:
         fie.main(file_loc=args.File, techniques=technique)
