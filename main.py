@@ -1,41 +1,11 @@
-"""The main file to run the program from the command line"""
+"""The file provides a command line interface for the tool"""
 
 
 import argparse
 import exploit.file_inspection_evasion as fie
 
-
-# def main(file_loc):
-#     """The main function for the program
-
-#     Args:
-#         file_loc (str): The location of the original zip file for the exploit
-#     """
-#     original_file_hex = fie.read_in_file(file_loc)
-#     local_files, central_directory, end_central_directory = fie._split_zip_file_into_sections(
-#         original_file_hex)
-#     # print('\n\n\n')
-#     # print(original_file_hex)
-#     # print('\n\n\n')
-#     # print(local_files)
-#     # print('\n\n\n')
-#     # print(central_directory)
-#     # print('\n\n\n')
-#     # print(end_central_directory)
-#     # print('\n\n\n')
-#     invalid_file_header = ('504b03040a0000000000000000006745'
-#                            '23010000000000000000ffff0000612f'
-#                            '2f2f642f')
-#     # fie.write_out_file(file_loc=file_loc,
-#     #                    contents=f'{local_files}')
-#     fie.write_out_file(file_loc=file_loc,
-#                        contents=f'{invalid_file_header}{local_files}')
-
-
-#  TODO Look up argparser examples
 if __name__ == '__main__':
-    # TODO update the description
-    msg = "Test Description can select multiple techniques default is ghost"
+    msg = "This is a command line tool as a PoC of some anti virus evading techniques"
 
     parser = argparse.ArgumentParser(description=msg)
 
@@ -57,18 +27,8 @@ if __name__ == '__main__':
     if args.buffer_collapsing:
         technique['buffer_collapsing'] = True
 
-    # if not args.ghost and not args.invalid_header:
-        # technique['ghost'] = True
-        # print("not ghost")
-
-    # if technique:
-    #     print(technique)
     if len(technique) == 0:
         print('Evasion Technique required')
 
-    # TODO open this up once tested
-    # elif len(technique) > 1:
-        # print('Only one technique at the moment')
-    # else:
-    if args.File:
+    if args.File and technique:
         fie.main(file_loc=args.File, techniques=technique)
