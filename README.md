@@ -43,6 +43,7 @@ $ python main.py -f test_files/files.zip -i
 ```
 
 Use in another project
+technique options 'ghost' | 'invalid_header' | 'buffer_collapsing'
 ```python
 import evasion_poc.file_inspection_evasion as fie
 
@@ -52,7 +53,7 @@ file_loc = test_files/files.zip
 fie.evade(file_loc=file_loc, techniques=technique)
 ```
 
-run test from home dir with
+Run test from home dir with
 ```
 $ python -m unittest
 ```
