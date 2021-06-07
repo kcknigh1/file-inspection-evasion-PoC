@@ -42,8 +42,8 @@ Run the Invalid Header technique on the file
 $ python main.py -f test_files/files.zip -i
 ```
 
-Use in another project
-technique options 'ghost' | 'invalid_header' | 'buffer_collapsing'
+Use in another project. 
+technique options: 'ghost' | 'invalid_header' | 'buffer_collapsing'
 ```python
 import evasion_poc.file_inspection_evasion as fie
 
