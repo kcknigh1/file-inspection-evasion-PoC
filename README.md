@@ -39,11 +39,11 @@ $ python main.py -f test_files/files.zip -g
 
 Run the Invalid Header technique on the file 
 ```
-$ python main.py -f test_files/files.zip -g
+$ python main.py -f test_files/files.zip -i
 ```
 
 Use in another project
-```
+```python
 import exploit.file_inspection_evasion as fie
 
 technique = ['ghost']

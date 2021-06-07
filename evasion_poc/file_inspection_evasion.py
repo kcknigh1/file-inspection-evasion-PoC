@@ -19,7 +19,7 @@
 """
 import os
 
-from exploit import utils
+from evasion_poc import utils
 from .zip_file import Zip_file
 
 

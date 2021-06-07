@@ -1,6 +1,6 @@
 """Implements the file structure of a zip file"""
 
-from exploit.central_directory_header import CentralDirectoryHeader
+from evasion_poc.central_directory_header import CentralDirectoryHeader
 from .end_central_dir_header import EndCentralDirectoryHeader
 from .utils import get_header_field
 

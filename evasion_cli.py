@@ -2,10 +2,14 @@
 
 
 import argparse
-import exploit.file_inspection_evasion as fie
+import evasion_poc.file_inspection_evasion as fie
 
 if __name__ == '__main__':
-    msg = """This is a command line tool as a PoC of some anti virus evading techniques"""
+    msg = """This is a command line tool as a PoC of some anti virus evading techniques
+    
+    Example: python evasion_poc.py test_files/files.zip -g
+    
+    """
 
     parser = argparse.ArgumentParser(description=msg)
 

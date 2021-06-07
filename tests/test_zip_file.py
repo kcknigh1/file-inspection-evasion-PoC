@@ -1,5 +1,5 @@
 import unittest
-from exploit.zip_file import Zip_file
+from evasion_poc.zip_file import Zip_file
 # import exploit.zip_file. as zf
 
 

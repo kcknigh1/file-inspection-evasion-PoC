@@ -1,7 +1,7 @@
 """The test file for the end central dir header class"""
 
 import unittest
-import exploit.end_central_dir_header as end_central_header
+import evasion_poc.end_central_dir_header as end_central_header
 
 
 class TestEndCentralDirHeaderInit(unittest.TestCase):

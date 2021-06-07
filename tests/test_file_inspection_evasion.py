@@ -1,6 +1,6 @@
-from exploit import central_directory_header
+# from exploit import central_directory_header
 import unittest
-import exploit.file_inspection_evasion as fie
+import evasion_poc.file_inspection_evasion as fie
 
 
 class TestCreateNewFilePath(unittest.TestCase):
