@@ -19,16 +19,18 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    technique = {}
+    # technique = {}
+    technique = []
+
     if args.ghost:
-        technique['ghost'] = True
+        technique.append('ghost')
     if args.invalid_header:
-        technique['invalid_header'] = True
+        technique.append('invalid_header')
     if args.buffer_collapsing:
-        technique['buffer_collapsing'] = True
+        technique.append('buffer_collapsing')
 
     if len(technique) == 0:
-        print('Evasion Technique required')
+        print('Evasion Technique Required')
 
     if args.File and technique:
         fie.evade(file_loc=args.File, techniques=technique)
