@@ -31,4 +31,4 @@ if __name__ == '__main__':
         print('Evasion Technique required')
 
     if args.File and technique:
-        fie.main(file_loc=args.File, techniques=technique)
+        fie.evade(file_loc=args.File, techniques=technique)
