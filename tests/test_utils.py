@@ -61,5 +61,5 @@ class TestGetHeaderField(unittest.TestCase):
     #     self.assertEqual(field, '66696c65312e747874')
 
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     unittest.main()
